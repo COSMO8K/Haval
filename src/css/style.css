@@ -1,0 +1,662 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+.header {
+  background: #000;
+}
+
+.header__top {
+  padding: 17px 0 14px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.header__inner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.header__divider {
+  display: block;
+  width: 1px;
+  height: 22px;
+  background: #fff;
+}
+
+.header__tel {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header__phone {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__addr {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header__text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+}
+
+.header__bottom {
+  padding: 8px 0;
+}
+
+.header__inner-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 24px;
+}
+
+.models__nav {
+  flex-shrink: 0;
+}
+
+.models__nav-list,
+.header-actions__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.models__nav-list {
+  column-gap: 16px;
+}
+
+.header-actions__list {
+  column-gap: 24px;
+}
+
+.models__nav a,
+.header__actions a {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* hero */
+
+.hero {
+  min-height: 756px;
+  background-image: url("../img/div.content.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.hero__shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 148px;
+  backdrop-filter: blur(10.600000381469727px);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 38.72%,
+    rgba(0, 0, 0, 0.5) 61.63%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero__wrapper {
+  padding-top: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__title {
+  font-weight: 500;
+  font-size: 40px;
+
+  line-height: 138%;
+  text-align: center;
+  color: #fff;
+}
+
+.hero__subtitle {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  color: #00cabf;
+}
+
+.hero__btn {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 374px;
+  height: 60px;
+  background: #00cabf;
+  border: none;
+  cursor: pointer;
+
+  /* text */
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+/* chat */
+
+.chat-button {
+  position: fixed;
+  left: 54px;
+  bottom: 64px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chat-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* timer */
+
+.timer-section {
+  padding: 26px 0 22px;
+  background: #f4f4f4;
+}
+
+.timer-section__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 72px;
+}
+
+.timer-section__title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+}
+
+.timer__item {
+  --progress: 75%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: conic-gradient(#00cabf var(--progress), #d9d9d9 0);
+}
+
+.timer__item::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: #f4f4f4;
+}
+
+.timer__value,
+.timer__label {
+  position: relative;
+  z-index: 1;
+}
+
+.timer__value {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1;
+  color: #000;
+}
+
+.timer__label {
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  color: #555;
+}
+
+.timer__separator {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1;
+  color: #000;
+}
+
+.timer-section__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 458px;
+  height: 70px;
+  border: 0;
+  background: #00cabf;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* cars */
+
+.cars-section {
+  padding: 50px 0 20px;
+  background: #fff;
+}
+
+.cars-slider {
+  max-width: 768px;
+  padding-top: 17px;
+}
+
+.car-card {
+  position: relative;
+  height: auto;
+  padding: 26px 26px 28px;
+  background: #f1f1f1;
+}
+
+.car-card__badge {
+  position: absolute;
+  top: -17px;
+  right: 26px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 126px;
+  min-height: 28px;
+  padding: 3px 12px;
+  background: #00cabf;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.car-card__badge span {
+  color: #000;
+}
+
+.car-card__visual {
+  min-height: 237px;
+  padding: 20px 16px 0;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+}
+
+.car-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 14px;
+}
+
+.car-card__title {
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.car-card__benefit {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+}
+
+.car-card__benefit span {
+  font-weight: 500;
+  color: #00cabf;
+}
+
+.car-card__test-drive {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8px;
+  max-width: 96px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.15;
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.car-card__test-icon {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #00cabf;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.car-card__test-icon svg:first-child {
+  width: 18px;
+  height: 18px;
+}
+
+.car-card__test-icon svg:last-child {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.car-card__test-drive:hover {
+  color: #00cabf;
+}
+
+.car-card__test-drive:hover .car-card__test-icon {
+  color: #000;
+}
+
+.car-card__image {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.car-card__image-link {
+  display: block;
+  margin-top: 9px;
+  overflow: hidden;
+}
+
+.car-card__image-link:hover .car-card__image {
+  transform: scale(1.02);
+}
+
+.car-card__colors {
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+  margin-top: 17px;
+}
+
+.car-card__color {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.car-card__color.is-active {
+  outline: 2px solid #bdbdbd;
+  outline-offset: 2px;
+}
+
+.car-card__color--black {
+  background: #000;
+}
+
+.car-card__color--white {
+  background: #ececec;
+}
+
+.car-card__color--gray,
+.car-card__color--silver {
+  background: #a9a9a9;
+}
+
+.car-card__color--terracotta {
+  background: #a33a22;
+}
+
+.car-card__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 16px;
+  margin-top: 27px;
+}
+
+.car-card__features li {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  min-height: 20px;
+  font-size: 11px;
+  line-height: 1.05;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.car-card__features img {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.car-card__features span {
+  display: block;
+}
+
+.car-card__features li:hover img {
+  filter: invert(55%) sepia(95%) saturate(1314%) hue-rotate(138deg)
+    brightness(94%) contrast(101%);
+}
+
+.car-card__actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  margin-top: 25px;
+}
+
+.car-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.car-card__button--primary {
+  background: #00cabf;
+  color: #fff;
+}
+
+.car-card__button--dark {
+  background: #000;
+  color: #fff;
+}
+
+.car-card__button--outline {
+  border-color: #000;
+  background: transparent;
+}
+
+/* modal */
+
+.modal {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+  padding: 0;
+  background: transparent;
+}
+
+.modal-form {
+  padding: 34px 32px 30px;
+  background: #fff;
+}
+
+.modal-form__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.modal-form__text {
+  margin-bottom: 22px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.modal-form__field {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.modal-form__field span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #555;
+}
+
+.modal-form__field input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 0;
+  font: inherit;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.modal-form__field input:focus {
+  border-color: #00cabf;
+}
+
+.modal-form__button {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  background: #00cabf;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.modal-form__button:hover {
+  background: #000;
+}
+
+.modal-form__policy {
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #777;
+}
